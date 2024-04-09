@@ -38,7 +38,7 @@ Load you SingleCellExperiment (sce) file
 sce <- readRDS("~/Destop/240321_sce_scDivisionPro_testing.rds")
 ```
 
-The sce file can be generated from fcs files using the workflow from CATALYST (https://bioconductor.org/packages/devel/bioc/vignettes/CATALYST/inst/doc/preprocessing.html). In short:
+If you do not have one, the sce file can be generated from fcs files using the workflow from CATALYST (https://bioconductor.org/packages/devel/bioc/vignettes/CATALYST/inst/doc/preprocessing.html). In short:
 
 Define working directory
 
@@ -88,7 +88,7 @@ division_peaks_graphs_list
 
 This function helps to visualize the approximate location of peaks in CFSE data.
 
-From the 'division_peaks_graphs_list' can get a first estimate of the location of the beginning dip (bd). It may be different from each donor, so please specify the donor number (dn). Keep iterating this function untill you have values that you are satisfied with.
+From the 'division_peaks_graphs_list' you can get a first estimate of the location of the beginning dip (bd). It may be different from each donor, so please specify the donor number (dn). Keep iterating this function untill you have values that you are satisfied with.
 
 Additional tweaks can be done to the peak_boundary_uncertainty and the approximate_peak_distance. bd defines the center of the area where the local minimum is calculated, and peak_boundary_uncertainty extends this area. E.g. 4.8 +/- 0.2. 
 

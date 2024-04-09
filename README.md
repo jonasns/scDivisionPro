@@ -54,16 +54,14 @@ fcs_files <- list.files(pattern = ".fcs$")
 fs <- read.flowSet(fcs_files, transformation = FALSE, truncate_max_range = FALSE)
 ```
 
-Import metadata
-
-Metadata file should be in the in working directory. Needs to have sample_id, condition, and patient_id. It is possible to add even more if desired
+Import metadata. Metadata file should be in the in working directory. Needs to have sample_id, condition, and patient_id. It is possible to add even more if desired
 
 ```{r}
 md <- read_excel("Totalcell_metadata.xlsx")                                  
 md
 ```
 
-import panel data
+Import panel data
 
 ```{r}
 panel <- "Totalcell_panel.xlsx"                           
@@ -81,8 +79,10 @@ sce <- prepData(fs, panel, md)
 
 This function generates graphs that recapitulate division peaks per donor.
 
+```{r}
 division_peaks_graphs_list <- generate_division_peak_graphs(sce, moi = "CFSE", soi = c("CD8_CM", "CD8_EM", "Th1", "eTreg"), conditions = c("stim_0x_Treg", "stim_10x_eTreg"), patient_id_col = "patient_id", subsets_col = "subsets", condition_col = "condition")
 division_peaks_graphs_list
+```
 
 ### 2. find_peak_location
 

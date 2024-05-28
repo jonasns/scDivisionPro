@@ -38,6 +38,8 @@ Load you SingleCellExperiment (sce) file
 sce <- readRDS("~/Destop/240321_sce_scDivisionPro_testing.rds")
 ```
 
+(Download the example file from here: https://www.dropbox.com/scl/fi/mnkuu1obhlr08nbe84te9/240321_sce_scDivisionPro_testing.rds?rlkey=03of4gmkzccxa9vgyyyj4vcgk&dl=0)
+
 If you do not have one, the sce file can be generated from fcs files using the workflow from CATALYST (https://bioconductor.org/packages/devel/bioc/vignettes/CATALYST/inst/doc/preprocessing.html). In short:
 
 Define working directory
